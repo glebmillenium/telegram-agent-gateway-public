@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "mode": "fake",
+  "network_enabled": false,
+  "outbound_enabled": false,
+  "agents": [
+    {
+      "id": "coordinator",
+      "name": "Координатор",
+      "purpose": "Пример агента для согласованных рабочих чатов.",
+      "prompt": "Описание поведения. Не предоставляет права и не передаётся модели автоматически.",
+      "enabled": true,
+      "telegram_username": "example_coordinator_bot",
+      "auth_principal": "coordinator",
+      "chats": [
+        {
+          "chat_id": -1001,
+          "type": "supergroup",
+          "title": "Synthetic coordinator",
+          "actions": [
+            "history",
+            "events"
+          ]
+        }
+      ],
+      "expected_bot_id": 5001
+    },
+    {
+      "id": "planner",
+      "name": "Planner",
+      "purpose": "Пример второго агента; модель подключается отдельно.",
+      "prompt": "Описание поведения. Не предоставляет права и не передаётся модели автоматически.",
+      "enabled": true,
+      "telegram_username": "example_planner_ai",
+      "auth_principal": "planner",
+      "chats": [
+        {
+          "chat_id": -1002,
+          "type": "supergroup",
+          "title": "Synthetic planner",
+          "actions": [
+            "history",
+            "events"
+          ]
+        }
+      ],
+      "expected_bot_id": 5002
+    }
+  ],
+  "state_dir": "D:\\GatewayExamples\\multi-fake",
+  "auth": {
+    "mode": "fake",
+    "credentials": {
+      "fixture-coordinator": "coordinator",
+      "fixture-planner": "planner"
+    }
+  },
+  "poll_interval_seconds": 1
+}

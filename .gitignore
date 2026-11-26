@@ -1,0 +1,14 @@
+__pycache__/
+.pytest_cache/
+.venv/
+*.pyc
+build/
+dist/
+*.egg-info/
+.env*
+*.local.*
+*.session*
+*.sqlite*
+*.db
+*.dpapi
+.state/

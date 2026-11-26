@@ -1,0 +1,6 @@
+{
+  "allowed_chats": [],
+  "max_messages": 20,
+  "max_text_chars": 4000,
+  "request_timeout_seconds": 15
+}

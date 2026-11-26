@@ -1,0 +1,6 @@
+{
+  "principals": {
+    "coordinator": [{"chat_id": -1001, "topic_id": null, "permissions": ["history", "events", "draft", "send"]}],
+    "support": [{"chat_id": -1002, "topic_id": 7, "permissions": ["history", "events"]}]
+  }
+}

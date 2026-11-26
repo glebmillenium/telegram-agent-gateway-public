@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "mode": "fake",
+  "bind": {"host": "127.0.0.1", "port": 8765},
+  "state_dir": "D:\\GatewayExamples\\fake-state",
+  "public_base_url": "http://127.0.0.1:8765",
+  "network_enabled": false,
+  "outbound_enabled": true,
+  "auth": {"mode": "fake", "credentials": {"fixture-coordinator":"coordinator", "fixture-support":"support"}},
+  "bot": {"approved_groups": [
+    {"chat_id":-1001,"type":"supergroup","title":"FAKE Coordinator"},
+    {"chat_id":-1002,"type":"supergroup","title":"FAKE SUPPORT"}
+  ]},
+  "policy": {"principals": {
+    "coordinator": [{"chat_id":-1001,"permissions":["history","events","draft","send"]}],
+    "support": [{"chat_id":-1002,"topic_id":7,"permissions":["history","events"]}]
+  }},
+  "approval": {"owner_ids":[99],"review_scope":{"chat_id":-1001}},
+  "allowed_callbacks": {},
+  "allowed_origins": []
+}

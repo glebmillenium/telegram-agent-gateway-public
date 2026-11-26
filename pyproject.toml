@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=80"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "telegram-agent-gateway"
+version = "0.1.0"
+description = "Principal-isolated Telegram gateway with durable events and owner-approved outbound actions"
+requires-python = ">=3.11"
+dependencies = ["mcp==1.30.0", "Telethon==1.45.0", "httpx==0.28.1", "starlette==1.9.0", "uvicorn==0.54.0", "PyJWT==2.15.1", "cryptography==50.0.2"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10", "pytest-asyncio>=0.24,<2"]
+
+[project.scripts]
+telegram-agent-gateway = "telegram_gateway.runtime:main"
+telegram-readonly-mcp = "telegram_readonly_mcp.server:main"
+telegram-readonly-login = "telegram_readonly_mcp.login:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.setuptools.exclude-package-data]
+"*" = ["profiles.local/*", "*/profiles.local/*", "*secrets.local.json", "*.local.md", "*.local.md.*", "secrets.local.json", "gateway.config.json", "*.session*", "*.sqlite*", "*.dpapi", ".env*"]

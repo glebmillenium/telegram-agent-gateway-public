@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "mode": "disabled",
+  "network_enabled": false,
+  "outbound_enabled": false,
+  "agents": [
+    {
+      "id": "coordinator",
+      "name": "Координатор",
+      "purpose": "Пример агента для согласованных рабочих чатов.",
+      "prompt": "Описание поведения. Не предоставляет права и не передаётся модели автоматически.",
+      "enabled": false,
+      "telegram_username": "example_coordinator_bot",
+      "auth_principal": "coordinator",
+      "chats": [],
+      "integration": {
+        "platform": "chatgpt_dots",
+        "inbound": {
+          "mode": "manual"
+        },
+        "outbound": {
+          "mode": "local_commands"
+        },
+        "enabled": false,
+        "status": "pending"
+      }
+    },
+    {
+      "id": "planner",
+      "name": "Planner",
+      "purpose": "Пример второго агента; модель подключается отдельно.",
+      "prompt": "Описание поведения. Не предоставляет права и не передаётся модели автоматически.",
+      "enabled": false,
+      "telegram_username": "example_planner_ai",
+      "auth_principal": "planner",
+      "chats": [],
+      "integration": {
+        "platform": "grok_bot",
+        "inbound": {
+          "mode": "manual"
+        },
+        "outbound": {
+          "mode": "local_commands"
+        },
+        "enabled": false,
+        "status": "pending"
+      }
+    }
+  ]
+}

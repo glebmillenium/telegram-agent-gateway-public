@@ -1,0 +1,6 @@
+{
+  "allowed_chats": [{"id": 100000001, "label": "MOCK: synthetic test dialog, not a real Telegram ID"}],
+  "max_messages": 20,
+  "max_text_chars": 4000,
+  "request_timeout_seconds": 15
+}

@@ -1,0 +1,7 @@
+{
+  "version": 1,
+  "mode": "disabled",
+  "network_enabled": false,
+  "outbound_enabled": false,
+  "policy": {"principals": {}}
+}

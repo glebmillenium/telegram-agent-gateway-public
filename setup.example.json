@@ -1,0 +1,7 @@
+{
+  "version": 1,
+  "secrets_dir": "D:\\GatewaySecrets",
+  "token_ref": {"file":"D:\\GatewaySecrets\\bot-token.txt"},
+  "target_title": "PRIVATE_TEST_GROUP",
+  "marker_text": "REPLACE_WITH_USER_CHOSEN_PUBLIC_TEST_TEXT"
+}
